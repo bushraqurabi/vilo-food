@@ -1,12 +1,8 @@
-/* General Styles */
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
     background-color: #f8f8f8;
     color: #333;
     background-image: url('images/webwall.png');
@@ -15,16 +11,15 @@ body {
     background-attachment: fixed;
 }
 
-/* Header */
 header {
     background-color: #4CAF50;
     color: white;
     padding: 1em;
     text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     display: flex;
     align-items: center;
     justify-content: space-around;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 header img {
@@ -33,17 +28,17 @@ header img {
     border-radius: 50%;
 }
 
-/* Navigation */
 nav {
     background-color: #333;
+    overflow: hidden;
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 20px;
-    padding: 10px;
+    justify-content: space-around;
 }
 
 nav a {
+    float: left;
+    display: block;
     color: white;
     text-align: center;
     padding: 14px 16px;
@@ -56,10 +51,8 @@ nav a:hover {
     color: black;
 }
 
-/* Section */
 section {
     padding: 20px;
-    text-align: center;
 }
 
 section h2 {
@@ -69,23 +62,65 @@ section h2 {
     margin-bottom: 20px;
 }
 
-/* Product List - One Column */
-.product-list {
+section div {
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 8px;
+    transition: box-shadow 0.3s;
+}
+
+section div:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.container {
     display: flex;
     flex-direction: column;
-    align-items: center; /* Center align products */
-    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.wallimg {
+    width: 600px;
+    height: 318px;
+    border: 5px solid;
+    border-radius: 8px;
+    margin-bottom: 2px;
+    margin-top: 30px;
+    margin-left: 370px;
+}
+
+footer {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 1em;
+    width: 100%;
+}
+
+.ainvilo {
+    text-decoration: none;
+    color: white;
+}
+
+.ainvilo h1 {
+    margin: 0;
+}
+
+.vfh {
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 .product {
-    width: 90%; /* Take most of the screen width but leave margins */
-    max-width: 400px; /* Keep products at a readable width */
+    width: 100%;
+    margin: 20px 0;
     background-color: #fff;
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    padding: 10px;
 }
 
 .product img {
@@ -102,27 +137,10 @@ section h2 {
     margin: 10px;
 }
 
-
-/* Wallpaper Image */
-.wallimg {
-    width: 600px;
-    height: 318px;
-    border: 5px solid;
-    border-radius: 8px;
-    display: block;
-    margin: 30px auto 2px;
+section form {
+    margin-top: 20px;
 }
 
-/* Footer */
-footer {
-    background-color: #4CAF50;
-    color: white;
-    text-align: center;
-    padding: 1em;
-    width: 100%;
-}
-
-/* Form Styling */
 form {
     max-width: 600px;
     margin: 0 auto;
@@ -139,8 +157,7 @@ textarea {
     width: 100%;
     padding: 10px;
     margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    box-sizing: border-box;
 }
 
 textarea {
@@ -160,7 +177,10 @@ input[type="submit"]:hover {
     background-color: #45a049;
 }
 
-/* Contact Section */
+section {
+    text-align: center;
+}
+
 .contact-container {
     max-width: 600px;
     margin: 0 auto;
@@ -172,19 +192,4 @@ input[type="submit"]:hover {
 .contact-container p,
 .contact-container address {
     font-weight: bold;
-}
-
-/* Text Styles */
-.ainvilo {
-    text-decoration: none;
-    color: white;
-}
-
-.ainvilo h1 {
-    margin: 0;
-}
-
-.vfh {
-    text-align: center;
-    font-family: 'Times New Roman', Times, serif;
 }
